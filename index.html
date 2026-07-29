@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>SK's Sweet 30th</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600&display=swap');
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 30% 20%, #2b1a4a 0%, #170f2e 55%, #0b0718 100%);
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 16px;
+    overflow-x: hidden;
+  }
+
+  .confetti {
+    position: fixed;
+    top: -20px;
+    font-size: 20px;
+    animation: fall linear infinite;
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @keyframes fall {
+    to { transform: translateY(110vh) rotate(360deg); }
+  }
+
+  .card {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    background: linear-gradient(160deg, #1f1338, #150d29);
+    border: 1px solid rgba(212, 175, 138, 0.35);
+    border-radius: 22px;
+    padding: 44px 34px 38px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.03) inset;
+    z-index: 2;
+  }
+
+  .eyebrow {
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: #d4af8a;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+
+  .name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 58px;
+    line-height: 1;
+    background: linear-gradient(120deg, #f7d9a0, #d4af8a 50%, #f7d9a0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0 0 6px;
+  }
+
+  .tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #f1e6d8;
+    margin: 0 0 4px;
+  }
+
+  .subtagline {
+    font-size: 14px;
+    color: #a99bc9;
+    margin: 0 0 26px;
+  }
+
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4af8a, transparent);
+    margin: 22px auto;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .detail-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #efe6f7;
+    font-size: 15px;
+  }
+
+  .detail-icon {
+    font-size: 18px;
+  }
+
+  .detail-label {
+    color: #a99bc9;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .rsvp-btn {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(120deg, #f2c078, #d4af8a);
+    color: #2b1a12;
+    border: none;
+    padding: 14px 38px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 10px 24px rgba(212, 175, 138, 0.35);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0,0,0,0.15);
+  }
+
+  .rsvp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(212, 175, 138, 0.45);
+  }
+
+  .rsvp-btn:active {
+    transform: translateY(0);
+  }
+
+  .rsvp-note {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #f2c078;
+    font-weight: 500;
+    min-height: 18px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .rsvp-note.show {
+    opacity: 1;
+  }
+
+  .footer-note {
+    margin-top: 24px;
+    font-size: 12px;
+    color: #6f6390;
+  }
+
+  @media (max-width: 480px) {
+    body {
+      padding: 20px 12px;
+    }
+    .card {
+      padding: 34px 20px 28px;
+      border-radius: 18px;
+    }
+    .name {
+      font-size: 42px;
+    }
+    .tagline {
+      font-size: 17px;
+    }
+    .rsvp-btn {
+      padding: 16px 32px;
+      font-size: 14px;
+      width: 100%;
+      max-width: 260px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h1 class="name">SK</h1>
+  <p class="tagline">You're invited to SK puttina dinam!</p>
+  <p class="subtagline">Sweet 30th birthday celebration 🥳</p>
+
+  <div class="divider"></div>
+
+  <div class="details">
+    <div class="detail-row">
+      <span class="detail-icon">📅</span>
+      <div>
+        <span class="detail-label">When</span>
+        This Friday night
+      </div>
+    </div>
+    <div class="detail-row">
+      <span class="detail-icon">📍</span>
+      <div>
+        <span class="detail-label">Where</span>
+        Somewhere in Columbus, OH (details on RSVP)
+      </div>
+    </div>
+    <div class="detail-row">
+      <span class="detail-icon">🎂</span>
+      <div>
+        <span class="detail-label">What</span>
+        Mandhu chindhu and Vindhu
+      </div>
+    </div>
+  </div>
+
+  <button class="rsvp-btn" onclick="handleRsvp()">RSVP</button>
+  <div class="rsvp-note" id="rsvpNote"></div>
+
+  <p class="footer-note">Bring your dancing shoes, not your excuses</p>
+</div>
+
+<script>
+  const colors = ['#f2c078', '#d4af8a', '#a99bc9', '#efe6f7'];
+  for (let i = 0; i < 30; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti';
+    c.textContent = ['🎉','🎊','✨'][Math.floor(Math.random()*3)];
+    c.style.left = Math.random() * 100 + 'vw';
+    c.style.animationDuration = (4 + Math.random() * 4) + 's';
+    c.style.animationDelay = (Math.random() * 5) + 's';
+    document.body.appendChild(c);
+  }
+
+  function handleRsvp() {
+    const note = document.getElementById('rsvpNote');
+    note.textContent = "You're in! 🎉 PS: bring only ladies along with you as your +1 😏 (kidding... mostly)";
+    note.classList.add('show');
+  }
+</script>
+
+</body>
+</html>
